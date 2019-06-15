@@ -1,0 +1,37 @@
+<style>
+table,th,td
+{
+border: 1px solid;
+}
+</style>
+<h1> Dogs</h1>
+<table>
+    <thead>
+        <tr>
+        <th >Name</th>
+        <th >Breed</th>
+        <th >Age</th>
+        <th>list of employes</th>
+        </tr>
+    </thead>
+    <tbody>
+
+       
+        <tr>
+        <td><%=@dog.name%></td>
+        <td> <%=@dog.breed%></td>
+        <td><%=@dog.age%></td>
+        <td><%=@dog.employees%></td>
+
+        <%= link_to "delete","/dogs/#{@dog.id}",method: "DELETE" %>
+
+    
+        
+        </tr>
+        
+    </tbody>
+
+
+    
+</table>
+

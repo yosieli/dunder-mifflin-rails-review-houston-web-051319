@@ -1,0 +1,40 @@
+<h1> Create New Employee</h1>
+<%= form_with model:  @employee do |f| %>
+  <div>
+  <%= f.label :first_name%>
+  <%= f.text_field :first_name %>
+  </div>
+  <div>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  </div>
+  <div>
+  <%= f.label :alias %>
+  <%= f.text_field :alias %>
+  </div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <div>
+  <%= f.label :office %>
+  <%= f.text_field :office%>
+
+  </div>
+  <div>
+  <%= f.label :Dog %>
+  <%= f.collection_select :dog_id, Dog.all,:id,:name %>
+  
+  </div>
+  <div>
+  <%= f.label :first_name %>
+  <%= f.check_box  :first_name %>
+
+
+
+
+  
+  
+  </div>
+
+
+  <%= f.submit %>
+<%end%>

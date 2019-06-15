@@ -1,0 +1,48 @@
+<style>
+table,th,td
+{
+border: 1px solid;
+}
+</style>
+<h1> Employee <%=@employee.first_name%></h1>
+<table>
+    <thead>
+        <tr>
+        <th >First Name</th>
+        <th >Last Name</th>
+        <th >Alias</th>
+        <th>Title</th>
+        <th>Office</th>
+        <th>Dog</th>
+
+        <th>Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+
+       
+        <tr>
+        <td><%=@employee.first_name%></td>
+        <td><%=@employee.last_name%></td>
+        <td><%=@employee.alias%></td>
+        <td><%=@employee.title%></td>
+        <td><%=@employee.office%></td>
+        <td><%=@employee.dog_id%></td>
+        <td><img src="<%= @employee.img_url%>" alt="<%@employee.first_name%>"/></td>
+
+        <%= link_to "delete","/employees/#{@employee.id}", method: "DELETE" %>
+
+
+        
+
+    
+        
+        </tr>
+        
+    </tbody>
+
+
+    
+</table>
+<%= link_to "go to home" ,"/employees"%>
+<%= link_to "edit","/employees/#{@employee.id}/edit"%>

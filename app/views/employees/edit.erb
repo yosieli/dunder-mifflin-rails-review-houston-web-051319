@@ -1,0 +1,26 @@
+<h1> Edit Employee</h1>
+<%= form_with model:  @employee do |f| %>
+  <div>
+  <%= f.label :first_name%>
+  <%= f.text_field :first_name %>
+  </div>
+  <div>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  </div>
+  <div>
+  <%= f.label :alias %>
+  <%= f.text_field :alias %>
+  </div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <div>
+  <%= f.label :office %>
+  <%= f.text_field :office%>
+
+  </div>
+  
+
+
+  <%= f.submit %>
+<%end%>

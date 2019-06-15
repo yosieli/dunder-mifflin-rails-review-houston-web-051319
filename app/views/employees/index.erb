@@ -1,0 +1,48 @@
+<style>
+table,th,td
+{
+border: 1px solid;
+}
+</style>
+<h1> Employee</h1>
+<table>
+    <thead>
+        <tr>
+        <th >First Name</th>
+        <th >Last Name</th>
+        <th >Alias</th>
+        <th>Title</th>
+        <th>Office</th>
+        <th>Dog</th>
+        <th>Show</th>
+        
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <% @employees.each do |employee| %>
+        <tr>
+        <td><%= employee.first_name%></td>
+        <td> <%= employee.last_name%></td>
+        <td><%= employee.alias%></td>
+        <td><%= employee.title%></td>
+        <td><%= employee.office%></td>
+        <td><%= employee.dog_id%></td>
+
+        <td> <%= link_to "show" ,"employees/#{employee.id}"%></td>
+        
+        </tr>
+        <%end%>
+    </tbody>
+
+
+    
+</table>
+<%= link_to "creat","employees/new"%>
+
+
+
+
+
+
